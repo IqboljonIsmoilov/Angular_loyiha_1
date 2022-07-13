@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <form>
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" name="title" placeholder="Enter Title" id="title"
+               [(ngModel)]="curentTask.title">
+      </div>
+      <div class="form-group">
+        <label for="content">Content:</label>
+        <input type="text" class="form-control" name="content" placeholder="Enter content" id="content"
+               [(ngModel)]="curentTask.content">
+      </div>
+      <div class="form-group form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" name="status" type="checkbox"
+                 [(ngModel)]="curentTask.status"> Status
+        </label>
+      </div>
+      <button class="btn btn-primary" (click)="createTask()">Create</button>
+    </form>
+  </div>
+
+  <div class="row">
+    <table class="table-bordered">
+      <thead>
+      <tr>
+        <th>№</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of taskList">
+          <td>1</td>
+          <td>{{task.title}}</td>
+          <td>{{task.content}}</td>
+          <td>{{task.status}}</td>
+          <td>
+            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-warning">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!--
+<p>Your name is: {{userName}}</p>
+<input id="user_name" type="text" placeholder="Ism" name="userName" [(ngModel)]="userName">
+<br>
+<p>Your surname is: {{userSurName}}</p>
+<input id="user_surname" type="text" placeholder="Familya" name="userName" [(ngModel)]="userSurName">
+<br>
+<br>
+
+<button class="btn btn-success" (click)="print()" >Test</button>
+-->
