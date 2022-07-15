@@ -1,4 +1,4 @@
-# MyProject1
+# AppHello
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
 
@@ -25,3 +25,31 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Install Jquery
+     npm install jquery --save
+     "scripts": [
+        "node_modules/jquery/dist/jquery.js",
+       ]
+
+# Install bootstrap
+     npm install bootstrap --save
+     npm install bootstrap jquery popper.js --save     
+
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "node_modules/bootstrap/dist/js/bootstrap.min.js",
+    "node_modules/popper.js/dist/umd/popper.min.js",        
+
+    In Bootstrap 4, bootstrap.min.js and bootstrap.bundle.min.js now conflict in dropdown.
+      By removing bootstrap.min.js, the dropdown double click issue will resolved
+      
+      "styles": [
+              "src/styles.scss",
+              "node_modules/bootstrap/scss/bootstrap.scss"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js"
+            ],
+
